@@ -36,8 +36,10 @@
                 <img src="fashion-girl.png" alt="">
             </div> -->
             <div class="hero">
-                <h1>The way discerning <span>lifestyle</span></h1>
-                <p>Life is hard enough already. Let us make it a little easier.</p>
+                <h1><span class="hidetext">The way</span></h1>
+                <h1><span class="hidetext">discerning</span></h1>
+                <h1><span class="hidetext underline">lifestyle</span></h1>
+                <p><span class="hidetext">Life is hard enough already. Let us make it a little easier.</span></p>
 
                 <button class="btn-arrow">
                     <i class='bx bx-right-arrow-alt' ></i>
@@ -45,7 +47,8 @@
                 </button>
             </div>
             <div class="model">
-                
+                <div class="bg"></div>
+                <img src="./portrait-young-happy-girl-holding-shopping-bags (1)_adobespark (1).png"  alt="">
             </div>
             <div class="feature">
                 <ul class="feature-list">
@@ -60,7 +63,85 @@
         </div>
     </main>
 
+    <!-- icons -->
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+     <!-- gsap -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+     <!-- three js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+     <script>
+        TweenMax.staggerFrom(".header ul.menu li.menu-item", 1.5, {
+            delay: 1.5,
+            opacity: 0,
+            y: "20",
+            ease: Expo.easeInOut,
+          },
+          0.08
+        );
+       
+        TweenMax.staggerFrom(".feature ul.feature-list li.feature-item", 1.5, {
+            delay: 1.5,
+            opacity: 0,
+            y: "20",
+            ease: Expo.easeInOut,
+          },
+          0.08
+        );
+  
+        TweenMax.from(".hero h1 .hidetext", 1.5, {
+          delay: 1,
+          y: "100%",
+          ease: Expo.easeInOut,
+        });
+  
+        TweenMax.from(".hero p .hidetext", 1.5, {
+          delay: 1.2,
+          y: "100%",
+          ease: Expo.easeInOut,
+        });
+      
+        TweenMax.from(".hero button.btn-arrow span", 1.5, {
+          delay: 1.2,
+          opacity: 0,
+          x: "-10",
+          ease: Expo.easeInOut,
+        });
+
+  
+        TweenMax.from("main .model", 2, {
+          delay: 1.5,
+        //   opacity: 0,
+          y: "-680",
+          ease: Expo.easeInOut,
+        });
+  
+        TweenMax.from("main .model img", 2.2, {
+          delay: 1.6,
+          opacity: 0,
+          y: "670",
+          ease: Expo.easeInOut,
+        });
+  
+  
+        TweenMax.to(".first", 1.5, {
+          delay: 0.5,
+          top: "-100%",
+          ease: Expo.easeInOut,
+        });
+  
+        TweenMax.to(".second", 1.5, {
+          delay: 0.7,
+          top: "-100%",
+          ease: Expo.easeInOut,
+        });
+  
+        TweenMax.to(".third", 1.5, {
+          delay: 1,
+          top: "-100%",
+          ease: Expo.easeInOut,
+        });
+      </script>
 
 </body>
 </html>
